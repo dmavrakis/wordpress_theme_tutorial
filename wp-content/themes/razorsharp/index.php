@@ -1,31 +1,38 @@
-<!DOCTYPE html>
-<html <?php language_attributes() ?> >
-<head>
-    <meta charset="<?php bloginfo('charset')?>">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0">
-    <meta name="description" content="<?php bloginfo('description')?>">
-    <title><?php bloginfo('name')?></title>
-    <?php wp_head()?>
-</head>
-<body <?php body_class()?>>
-<?php wp_body_open()?>
+<?php
 
-    <?php
+get_header();
 
-    get_template_part('template-parts/nav');
+get_template_part('template-parts/nav');
 
-    if(have_posts()){
-        while(have_posts()){
-            the_post();
-            ?>
-            <?php the_title()?>
-            <p><?php the_excerpt()?></p>
-            <hr>
+if (is_home()) {
+    get_template_part('template-parts/slider');
+}
+
+?>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col p-4 card-group justify-content-center">
             <?php
-        }
-    }
+            if (have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                    if (is_page()) {
+                        get_template_part('template-parts/page');
+                    } else {
+                        get_template_part('template-parts/post');
+                    }
+                }
+            }
 
-    ?>
-<?php wp_footer()?>
-</body>
-</html>
+            ?>
+        </div>
+
+        <div class="col-md-3 bg-light p-2">sadasfasf</div>
+    </div>
+</div>
+
+<?php get_template_part('template-parts/pagination'); ?>
+
+
+<?php get_footer(); ?>

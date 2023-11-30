@@ -7,3 +7,60 @@ Description: This is a new theme.
 Tags: you, can, put, what, ever, you, want
 
 */
+
+img{
+    max-width: 100%;
+}
+
+.custom-logo {
+    max-width: 200px;
+    max-height: 50px;
+}
+
+/* main menu style with just css */
+/*
+#menu-main-nav-menu {
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+#menu-main-nav-menu li{
+    padding: 4px;
+    border-right: solid thin #aaa;
+    border-right: solid thin #ccc;
+    list-style: none;
+    background-color: #eee;
+}
+
+#menu-main-nav-menu li:hover {
+    background-color: gray;
+}
+
+#menu-main-nav-menu li:hover > a{
+    color: white;
+}
+
+#menu-main-nav-menu li:hover .sub-menu{
+    display: block;
+}
+
+#menu-main-nav-menu a{
+    text-decoration: none;
+}
+
+#menu-main-nav-menu .sub-menu {
+    position: absolute;
+    left: 0;
+    top: 33px;
+    display: none;
+}
+*/
+
+
+/* Remove bootstrap to use this as post pagination customize */
+/* .page-numbers{
+    display: inline-block;
+    padding: 10px;
+    border: solid thin #aaa;
+} */
