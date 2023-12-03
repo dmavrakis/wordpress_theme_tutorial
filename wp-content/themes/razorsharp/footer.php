@@ -1,8 +1,8 @@
 <footer>
     <div class="container-fluid">
         <div class="row">
-            <div class="col" style="min-width: 200px;">dfSDSsd</div>
-            <div class="col" style="min-width: 200px;">dfSDSsd</div>
+            <div class="col" style="min-width: 200px;"><?php dynamic_sidebar('footer-sidebar-1'); ?></div>
+            <div class="col" style="min-width: 200px;"><?php dynamic_sidebar('footer-sidebar-2'); ?></div>
             <div class="col" style="min-width: 200px;">
 
                 <?php

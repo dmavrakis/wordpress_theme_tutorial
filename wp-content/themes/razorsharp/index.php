@@ -28,9 +28,14 @@ if (is_home()) {
             ?>
         </div>
 
-        <div class="col-md-3 bg-light p-2">sadasfasf</div>
+        <div class="col-md-3 bg-light p-2">
+            <?php dynamic_sidebar('sidebar-1'); ?>
+        </div>
     </div>
 </div>
+
+
+
 
 <?php get_template_part('template-parts/pagination'); ?>
 
